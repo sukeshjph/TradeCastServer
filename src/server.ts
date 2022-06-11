@@ -38,8 +38,8 @@ export async function app() {
     }
 
     let session = await createSession(req, res);
+    
     session.push("Joining StreamCasts");
-    session.once;
     randomCastChannel.register(session);
 
     req.on("close", () => {
@@ -66,7 +66,9 @@ export async function app() {
           (cast) =>
             cast.bondId === parseInt(bondId, 10) &&
             cast.originatorUserId === parseInt(orgId, 10) &&
-            cast.side === side
+            cast.side === side &&
+            cast.status !== Status.CANCELLED
+
         );
 
         if (getLastCastIndex !== -1) {
