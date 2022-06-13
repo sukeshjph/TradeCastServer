@@ -22,7 +22,6 @@
     "eslint-import-resolver-webpack": "^0.12.2",
     "express": "^4.18.1",
     "express-validator": "^6.14.1",
-    "generate-random-data": "^0.0.3",
     "heroku": "^7.60.2",
     "node-fetch": "^1.7.3",
     "node-json-db": "^1.5.0",
